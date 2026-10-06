@@ -1,0 +1,337 @@
+        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #000;
+            color: #fff;
+            font-family: 'Oswald', sans-serif;
+            overflow-x: hidden; 
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+             background-image: url(img/atlusmove.gif);
+              background-size: cover;
+        }
+
+        header {
+            text-align: center;
+            background: rgb(49, 68, 241);
+            padding: 2rem 0;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 0 #000;
+        }
+
+        .scroll-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            padding: 3rem 2rem;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            
+            flex-grow: 1; 
+        }
+
+        .game {
+            flex: 0 0 300px;
+            height: 400px;
+            background: #111;
+            border: 3px solid #fff;
+            border-radius: 20px;
+            scroll-snap-align: center;
+            position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            overflow: hidden;
+        }
+
+        .game img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(0.6);
+            transition: filter 0.3s ease;
+        }
+
+        .game:hover {
+            transform: scale(1.15);
+            z-index: 10;
+        }
+
+        .game:hover img {
+            filter: brightness(1);
+        }
+
+        a.game {
+            text-decoration: none;
+            color: inherit;
+            cursor: pointer;
+        }
+
+        a.game:hover {
+            transform: scale(1.15);
+            z-index: 10;
+        }
+
+        a.game:hover img {
+            filter: brightness(1);
+        }
+
+
+        #p3:hover { box-shadow: 0 0 25px #00f; } 	
+        #p5:hover { box-shadow: 0 0 25px #c00; } 	
+        #meta:hover { box-shadow: 0 0 25px #0ff; } 
+        #p4:hover { box-shadow: 0 0 25px #ff0; }
+
+        .info {
+            position: absolute;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.8);
+            width: 100%;
+            padding: 1rem;
+            text-align: center;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .game:hover .info {
+            transform: translateY(0);
+        }
+
+
+        footer {
+            text-align: center;
+            background: #111;
+            padding: 0; 
+            font-size: 0.8rem;
+            color: #aaa;
+            
+            position: relative; 
+    
+            min-height: 260px; 
+        }
+
+        #jackfrost-guide {
+            position: absolute; 
+            width: 100%;
+            max-width: none;
+            bottom: 4; 
+            left: 0; 
+            transform: none; 
+            
+            display: flex;
+            flex-direction: column; 
+            align-items: center; 
+            z-index: 1000;
+        }
+
+
+    
+        #jackfrost-img {
+            width: 150px; 
+            height: auto; 
+            object-fit: contain; 
+            margin-bottom: -115px; 
+            filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
+            cursor: pointer; 
+        }
+
+
+        #dialogue-box {
+            background-color: #0040a0; 
+            color: white; 
+            border: none;
+            border-radius: 0; 
+            padding: 15px 20px;
+            
+            width: 100%; 
+            max-width: none;
+            bottom: 0;
+            transform: none;
+       
+            height: 260px; 
+            
+            box-shadow: none; 
+            
+            text-transform: uppercase; 
+            text-align: left;
+            
+            display: flex;
+            flex-direction: column;
+            
+            opacity: 0;
+            pointer-events: none; 
+            transition: opacity 0.3s ease-in-out; 
+        }
+
+        #dialogue-box::before, #dialogue-box::after {
+            content: none;
+        }
+
+        #jackfrost-guide.active #dialogue-box {
+            opacity: 1;
+            pointer-events: auto; 
+        }
+
+
+        #chat-history {
+            flex-grow: 1; 
+            overflow-y: auto; 
+            margin-bottom: 10px;
+            padding-right: 10px; 
+            border-bottom: 3px solid #00ffff; 
+        }
+
+        .chat-message {
+            font-size: 2em;
+            font-weight: 500;
+            padding: 5px 0;
+            line-height: 1.4;
+            text-transform: none; 
+        }
+
+        .chat-message strong {
+            color: #00b7ff;
+            margin-right: 5px;
+        }
+        
+        .chat-message.user {
+            text-align: right;
+            color: #ccc;
+        }
+        
+        .chat-message.user strong {
+            color: white;
+        }
+
+        #chat-input-container {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        
+        #loading-indicator {
+            color: #3fb2cf;
+            font-size: 0.9em;
+            text-align: right;
+            margin-right: 10px;
+            visibility: hidden;
+            height: 10px;
+        }
+
+        #chat-input {
+            flex-grow: 1;
+            background-color: #003170;  
+            border: 1px solid #dbdbdb;
+            padding: 8px 10px;
+            font-size: 1em;
+            font-weight: 700;
+            border-radius: 2px;
+            text-transform: none; 
+        }
+
+        #chat-input:focus {
+            outline: none;
+            border-color: white;
+        }
+
+        #send-btn {
+            background-color: #FFD700;
+            color: #333;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: 900;
+            border-radius: 2px;
+            transition: background-color 0.1s;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        #send-btn:hover {
+            background-color: white;
+        }
+        #send-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+    
+#jackfrost-guide.active #jackfrost-img {
+    position: absolute;
+    right: 20px;   
+    bottom: 260px; 
+    margin: 0;
+}
+
+#dialogue-box {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity .25s ease, transform .25s ease;
+}
+#jackfrost-guide.active #dialogue-box {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+#jackfrost-guide.active #jackfrost-img {
+  position: absolute;
+  right: 20px;
+  bottom: 260px; 
+  margin: 0;
+}
+
+@keyframes bobbing {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.jackfrost-bob {
+    animation: bobbing 0.5s infinite ease-in-out;
+}
+
+#loading-indicator::after {
+  content: '…';
+  animation: dots 1.2s steps(3, end) infinite;
+}
+@keyframes dots {
+  0% { content: '…'; }
+  33% { content: '.'; }
+  66% { content: '..'; }
+  100% { content: '…'; }
+}
+
+
+
+        @media (max-width: 600px) {
+
+            #jackfrost-img {
+                width: 100px;
+                margin-bottom: -90px; 
+            }
+
+            footer {
+                min-height: 200px; 
+            }
+            #dialogue-box {
+                height: 200px;
+                padding: 10px 15px;
+            }
+            
+            #chat-input {
+                font-size: 0.9em;
+            }
+            #send-btn {
+                padding: 8px 12px;
+                font-size: 0.9em;
+            }
+        }

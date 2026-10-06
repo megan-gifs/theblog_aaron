@@ -1,0 +1,159 @@
+@import url(https://db.onlinewebfonts.com/c/018278b413eb93ab16773ef113675658?family=EloquentJFSmallCapsPro);
+@font-face {
+  font-family: "EloquentJFSmallCapsPro";
+  src: url("https://db.onlinewebfonts.com/t/018278b413eb93ab16773ef113675658.eot");
+  src: url("https://db.onlinewebfonts.com/t/018278b413eb93ab16773ef113675658.eot?#iefix")format("embedded-opentype"),
+  url("https://db.onlinewebfonts.com/t/018278b413eb93ab16773ef113675658.woff2")format("woff2"),
+  url("https://db.onlinewebfonts.com/t/018278b413eb93ab16773ef113675658.woff")format("woff"),
+  url("https://db.onlinewebfonts.com/t/018278b413eb93ab16773ef113675658.ttf")format("truetype"),
+  url("https://db.onlinewebfonts.com/t/018278b413eb93ab16773ef113675658.svg#EloquentJFSmallCapsPro")format("svg");
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Kanit', sans-serif;
+  color: white;
+  background: radial-gradient(circle at center, #0f1a2e, #060b18);
+  min-height: 100vh;
+  overflow-x: hidden;
+    background-image: url(img/methgif.webp);
+  background-size: cover;
+  font-family: "EloquentJFSmallCapsPro";
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5rem;
+  background: 	#77b0b6;
+  border-bottom: 2px solid #858383;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-image: url(img/metbanner.jpg);
+  background-size: cover;
+}
+
+nav a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: rgb(115, 115, 115);
+  transition: color 0.3s ease;
+  font-size: 30px;
+}
+
+nav a:hover {
+  color: #c00964;
+}
+
+main {
+  max-width: 1000px;
+  margin: 3rem auto;
+  text-align: center;
+  padding: 1rem;
+}
+
+.content-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 3rem auto;
+}
+
+.left-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.right-column {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  flex: 1;
+  min-width: 300px;
+}
+
+.game-image img {
+  width: 600px;
+  height: auto;
+  border-radius: 20px;
+  border: 2px solid #23c7d9;
+  box-shadow: 0 0 20px rgba(217,35,35, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.game-image img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 35px rgba(217,35,35, 0.4);
+}
+
+.spotify-player {
+  border: 2px solid 	#c00964;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 0 25px rgba(242,232,82, 0.4);
+}
+
+.review-card,
+.stat-box {
+  background: rgba(20, 20, 30, 0.6);  
+  border: 2px solid rgba(255, 0, 128, 0.6);  
+  border-radius: 15px;
+  padding: 1rem;
+  color: #fff;
+  text-align: center;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+ 
+.review-card span,
+.stat-box span {
+  display: inline-block;
+  transform: translateX(30px);  
+  opacity: 0;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.review-card:hover,
+.stat-box:hover {
+  transform: scale(1.05) translateY(-5px);  
+  box-shadow: 0 0 35px rgba(255, 0, 128, 0.7), 0 0 50px rgba(0, 255, 255, 0.5);  
+  border-color: #ff00ff;  
+}
+
+.review-card:hover span,
+.stat-box:hover span {
+  transform: translateX(0);  
+  opacity: 1;  
+}
+
+.game-trailer {
+  position: relative;
+  width: 600px;  
+  max-width: 100%;  
+  padding-top: 56.25%; 
+  border: 2px solid #ff00ff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 0 25px rgba(255, 0, 255, 0.5), 0 0 40px rgba(0, 255, 255, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.game-trailer iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+

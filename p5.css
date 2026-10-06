@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;600&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Kanit', sans-serif;
+  color: #fff;
+  background: linear-gradient(135deg, #0b0f1a, #1c0f0f);
+  min-height: 100vh;
+  overflow-x: hidden;
+    background-image: url(img/persona5city.png);
+  background-size: cover;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 4rem;
+  background: #c80000;
+  border-bottom: 3px solid #fff;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+    background-image: url(img/persona5banner.gif);
+  background-size: cover;
+}
+
+header h1 {
+  font-size: 2.4rem;
+  letter-spacing: 3px;
+  color: #fff;
+  text-shadow: 2px 2px 0 #000;
+}
+
+nav a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+nav a:hover {
+  color: #ffdd00;
+  transform: scale(1.05);
+}
+
+main {
+  max-width: 1200px;
+  margin: 3rem auto;
+  text-align: center;
+  padding: 1rem;
+}
+
+.content-wrapper {
+  display: flex;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 2rem auto;
+  flex-wrap: wrap;
+  justify-content: center; 
+}
+
+
+.left-column {
+  flex: 0 0 400px; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+
+.right-column {
+  flex: 1 1 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  min-width: 300px;
+}
+
+.game-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  border: 3px solid #ff0000;
+  box-shadow: 0 0 30px rgba(255,0,0,0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.game-image img:hover {
+  transform: scale(1.07) rotate(-1deg);
+  box-shadow: 0 0 50px rgba(255,0,0,0.7);
+}
+
+.review-card {
+  background: #1b1b1b;
+  border: 2px solid #ff0000;
+  border-radius: 10px;
+  padding: 1.5rem;
+  text-align: left;
+  box-shadow: 0 0 15px rgba(255,0,0,0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.review-card:hover {
+  transform: translateY(-10px) rotate(-1deg);
+  box-shadow: 0 0 40px rgba(255,0,0,0.6);
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1.5rem;
+  justify-items: center;
+  margin-top: 2rem;
+}
+
+.stat-box {
+  background: #1b1b1b;
+  border: 2px solid #ff0000;
+  border-radius: 10px;
+  padding: 1rem;
+  width: 100%;
+  max-width: 150px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(255,0,0,0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  background-image: url(img/persona5\ card.jpg);
+  background-size:cover;
+  
+}
+
+.stat-box:hover {
+  transform: scale(1.05) rotate(-1deg);
+  box-shadow: 0 0 30px rgba(255,0,0,0.6);
+}
+
+.game-video {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 2px solid #ffdd00;
+  box-shadow: 0 0 30px rgba(255,221,0,0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.game-video:hover {
+  transform: scale(1.05) rotate(-1deg);
+  box-shadow: 0 0 50px rgba(255,221,0,0.7);
+}
+
+.game-video iframe {
+  width: 100%;
+  height: 340px;
+  display: block;
+  border: none;
+}
+
+.spotify-player {
+  border: 2px solid #ffdd00;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 0 35px rgba(255,221,0,0.5);
+}
+
+@media (max-width: 1024px) {
+  .content-wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .left-column, .right-column {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .game-image img, .game-video {
+    max-width: 90%;
+  }
+
+  .stats {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+}

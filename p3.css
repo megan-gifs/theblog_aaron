@@ -1,0 +1,245 @@
+@import url("https://db.onlinewebfonts.com/c/a1064a651347180bcb010c3673903bff?family=D");
+@font-face {
+  font-family: "D";
+  src: url("https://db.onlinewebfonts.com/c/a1064a651347180bcb010c3673903bff?family=D");
+}
+
+  body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Kanit', sans-serif;
+  color: white;
+  background: radial-gradient(circle at center, #0f1a2e, #060b18);
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-image: url(img/persona-3-makotobackgroun.gif);
+  background-size: contain;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5rem;
+  background: rgba(0, 20, 60, 0.8);
+  border-bottom: 2px solid #00bfff;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+header h1 {
+  font-size: 2.2rem;
+  letter-spacing: 2px;
+  color: #00bfff;
+  text-shadow: 0 0 10px #00bfff;
+  font-family: "D";
+}
+
+nav a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s ease;
+  font-family: "D";
+  font-size: 30px;
+}
+
+nav a:hover {
+  color: #00bfff;
+}
+
+main {
+  max-width: 1000px;
+  margin: 3rem auto;
+  text-align: center;
+  padding: 1rem;
+}
+
+.content-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 3rem auto;
+}
+
+.left-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.right-column {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  flex: 1;
+  min-width: 300px;
+}
+
+.game-image img {
+  width: 600px;
+  height: auto;
+  border-radius: 20px;
+  border: 2px solid #00bfff;
+  box-shadow: 0 0 20px rgba(0, 191, 255, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.game-image img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 35px rgba(0, 191, 255, 0.7);
+}
+
+.spotify-player {
+  border: 2px solid #00bfff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 0 25px rgba(0, 191, 255, 0.4);
+}
+
+.review-card {
+  position: relative;
+  display: inline-block;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  color: #6ad1ff; 
+  font-family: 'Kanit', sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: color 0.3s ease;
+  font-family: "D";
+}
+
+.review-card::before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  right: -100%;
+  width: 100%;
+  height: 100%;
+  background: #e60026;
+  z-index: 0;
+  border-radius: 10px;
+}
+
+
+.review-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -100%; 
+  width: 95%; 
+  height: 100%;
+  background: #ffffff;
+  z-index: 1;
+  border-radius: 10px;
+  opacity: 0.95;
+}
+
+
+.review-card:hover::before {
+  right: 6px; 
+}
+
+.review-card:hover::after {
+  right: 0;
+}
+
+.review-card span,
+.review-card h2,
+.review-card p {
+  position: relative;
+  z-index: 2;
+  color: #6ad1ff;
+  transition: color 0.3s ease;
+}
+
+.review-card:hover span,
+.review-card:hover h2,
+.review-card:hover p {
+  color: #000; 
+}
+
+
+.stat-box {
+  position: relative;
+  display: inline-block;
+  padding: 1.5rem 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  color: #6ad1ff; 
+  font-family: 'Kanit', sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: color 0.3s ease;
+  font-family: "D";
+}
+
+.stat-box::before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  right: -100%;
+  width: 100%;
+  height: 100%;
+  background: #e60026;
+  z-index: 0;
+  border-radius: 10px;
+}
+
+.stat-box::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -100%;
+  width: 95%;
+  height: 100%;
+  background: #ffffff;
+  z-index: 1;
+  border-radius: 10px;
+  opacity: 0.95;
+}
+
+.stat-box:hover::before {
+  right: 6px;
+}
+
+.stat-box:hover::after {
+  right: 0;
+}
+
+.stat-box span,
+.stat-box h3,
+.stat-box p {
+  position: relative;
+  z-index: 2;
+  color: #6ad1ff; 
+  transition: color 0.3s ease;
+}
+
+.stat-box:hover span,
+.stat-box:hover h3,
+.stat-box:hover p {
+  color: #000;
+}
+
+.game-video {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 0 25px rgba(0, 191, 255, 0.4);
+}
+
+.game-video iframe {
+  width: 100%;
+  height: 340px; 
+  display: block;
+}

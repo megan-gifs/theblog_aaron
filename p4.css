@@ -1,0 +1,209 @@
+@import url(https://db.onlinewebfonts.com/c/56689f811bfbb75c3c71b8a10e2f04da?family=PIXymbols+Vershen+W01+Regular);
+
+@font-face {
+  font-family: "PIXymbols Vershen W01 Regular";
+  src: url("https://db.onlinewebfonts.com/t/56689f811bfbb75c3c71b8a10e2f04da.eot");
+  src: url("https://db.onlinewebfonts.com/t/56689f811bfbb75c3c71b8a10e2f04da.eot?#iefix")format("embedded-opentype"),
+  url("https://db.onlinewebfonts.com/t/56689f811bfbb75c3c71b8a10e2f04da.woff2")format("woff2"),
+  url("https://db.onlinewebfonts.com/t/56689f811bfbb75c3c71b8a10e2f04da.woff")format("woff"),
+  url("https://db.onlinewebfonts.com/t/56689f811bfbb75c3c71b8a10e2f04da.ttf")format("truetype"),
+  url("https://db.onlinewebfonts.com/t/56689f811bfbb75c3c71b8a10e2f04da.svg#PIXymbols Vershen W01 Regular")format("svg");
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Kanit', sans-serif;
+  color: white;
+  background: radial-gradient(circle at center, #0f1a2e, #060b18);
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-image: url(img/persona4brownbapaper.png);
+  background-size: cover;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5rem;
+  background: 	#ffe52c;
+  border-bottom: 4px solid #faa622;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-image: url(img/persona\ 4banner.jpg);
+  background-size: cover;
+}
+
+nav a {
+  margin: 0 0.5rem;
+  text-decoration: none;
+    color: #ffffff; 
+  -webkit-text-stroke-width: 1px; 
+  -webkit-text-stroke-color: #000000; 
+  transition: color 0.3s ease;
+  font-size: 30px;
+  font-weight: bolder;
+
+}
+
+nav a:hover {
+  color: #7fe6ef;
+}
+
+main {
+  max-width: 1000px;
+  margin: 3rem auto;
+  text-align: center;
+  padding: 1rem;
+}
+
+.content-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 3rem auto;
+}
+
+.left-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.right-column {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  flex: 1;
+  min-width: 300px;
+}
+
+.game-image img {
+  width: 600px;
+  height: auto;
+  border-radius: 20px;
+  border: 2px solid #c4d70c;
+  box-shadow: 0 0 20px rgba(196,215,12, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.game-image img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 35px rgba(196,215,12, 0.4);
+}
+
+.spotify-player {
+  border: 3px solid var(--p4-yellow);
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(255, 229, 44, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.spotify-player:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 35px rgba(196,215,12, 0.4);
+}
+
+.review-card {
+  background: rgba(0, 0, 0, 0.7);
+  border: 3px solid var(--p4-yellow);
+  border-radius: 20px;
+  padding: 1.5rem;
+  text-align: left;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 20px rgba(255, 229, 44, 0.2);
+  font-family: "PIXymbols Vershen W01 Regular";
+}
+
+.review-card h2 {
+  font-size: 2rem;
+  color: var(--p4-yellow);
+  text-shadow: 2px 2px 0 black;
+  margin-bottom: 1rem;
+}
+
+.review-card p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+
+.stat-box {
+  background: rgba(0, 0, 0, 0.8);
+  border: 3px solid var(--p4-yellow);
+  border-radius: 15px;
+  width: 100%;
+  max-width: 200px;
+  padding: 1rem;
+  text-align: center;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  font-family: "PIXymbols Vershen W01 Regular";
+}
+
+.stat-box h3 {
+  font-size: 1.2rem;
+  color: var(--p4-yellow);
+  margin-bottom: 0.5rem;
+  text-shadow: 1px 1px 0 black;
+}
+
+.stat-box p {
+  font-size: 1.1rem;
+  color: var(--p4-blue);
+  letter-spacing: 2px;
+  transition: color 0.3s ease;
+}
+
+.stat-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(127, 230, 239, 0.2);
+  transition: left 0.3s ease;
+}
+
+.stat-box:hover::before {
+  left: 0;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(255,229,44,0.05), rgba(0,0,0,0.9));
+  pointer-events: none;
+  z-index: 0;
+}
+
+.game-video {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 0 25px rgba(0, 191, 255, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.game-video:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 35px rgba(196,215,12, 0.4);
+}
+
+.game-video iframe {
+  width: 100%;
+  height: 340px; 
+  display: block;
+}

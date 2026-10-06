@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Top 4 Atlus Games</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Top 4 Atlus Games</h1>
+        <p>Your guide is waiting at the bottom!!</p>
+    </header>
+
+    <main class="scroll-container">
+        <a href="p3.html" class="game" id="p3">
+            <img src="img/persona3poster.jpg" alt="Persona 3 Reload">
+            <div class="info">
+                <h2>1. Persona 3 Reload</h2>
+                <p>A dark, emotional story about life and death, reborn in stunning modern style.</p>
+            </div>
+        </a>
+
+        <a href="p5.html" class="game" id="p5">
+            <img src="img/persona5poster.jpg" alt="Persona 5 Royal">
+            <div class="info">
+                <h2>2. Persona 5 Royal</h2>
+                <p>Slick, confident, and unforgettable, a masterclass in style and rebellion.</p>
+            </div>
+        </a>
+
+        <a href="metaphor.html" class="game" id="meta">
+            <img src="img/refanmetaposter.jpg" alt="Metaphor: ReFantazio">
+            <div class="info">
+                <h2>3. Metaphor: ReFantazio</h2>
+                <p>Atlus’s next evolution, a grand fantasy RPG mixing courage, identity, and imagination.</p>
+            </div>
+        </a>
+
+        <a href="p4.html" class="game" id="p4">
+            <img src="img/persona4poster.webp" alt="Persona 4 Golden">
+            <div class="info">
+                <h2>4. Persona 4 Golden</h2>
+                <p>A heartfelt mystery with a lovable cast and warm small-town charm.</p>
+            </div>
+        </a>
+    </main>
+
+    <footer>
+        <p>Hee-Ho! Click me to chat!</p>
+        
+        <div id="jackfrost-guide">
+            <img id="jackfrost-img" src="img/jackfrostsprite1.webp" alt="Jack Frost Guide" />
+
+            <div id="dialogue-box">
+                <div id="chat-history">
+                    <p class="chat-message jackfrost">
+                        <strong>Jack Frost:</strong> Hee-ho! I'm ready to chat, hee-ho! I know all about Persona and the rest of Atlus’s games! Ask me anything, ho!
+                    </p>
+                </div>
+                
+                <div id="chat-input-container">
+                    <span id="loading-indicator">THINKING...</span>
+                    
+                    <input type="text" id="chat-input" placeholder="Type your question here...">
+                    
+                    <button id="send-btn" disabled>SEND</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+ <script src="script.js"></script>
+</body>
+</html>
